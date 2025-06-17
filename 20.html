@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Gearhead 💛</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #111217, #1a1c23);
+      color: #ffe4ec;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 6em 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6em;
+    }
+
+    .msg-box {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border: 2px solid #ffcaff;
+      border-radius: 1.2em;
+      padding: 2em;
+      font-size: 1.4em;
+      background: rgba(255, 202, 255, 0.05);
+      box-shadow: 0 0 1em rgba(255, 170, 255, 0.2);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .msg-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0%;
+      width: 100%;
+      background: linear-gradient(to top, #ffcaffcc, #ffb8ff33);
+      z-index: 0;
+      transition: height 1.5s ease;
+      border-radius: 0 0 1em 1em;
+    }
+
+    .msg-text {
+      position: relative;
+      z-index: 2;
+      opacity: 0.1;
+      transition: opacity 1s ease;
+    }
+
+    .msg-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .msg-box.filled .msg-fill {
+      height: 100%;
+    }
+
+    .msg-box.filled .msg-text {
+      opacity: 1;
+    }
+
+    .drop {
+      width: 14px;
+      height: 14px;
+      background: #ffb8ff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -1em;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      animation: drop 0.6s ease forwards;
+    }
+
+    @keyframes drop {
+      0% { transform: translateX(-50%) scale(0); opacity: 0; }
+      50% { transform: translateX(-50%) translateY(10px) scale(1.2); opacity: 1; }
+      100% { transform: translateX(-50%) translateY(25px) scale(1); opacity: 0; }
+    }
+
+    .msg-box.left {
+      align-self: flex-start;
+    }
+
+    .msg-box.right {
+      align-self: flex-end;
+    }
+
+    /* HEART POP */
+    .heart-pop {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.4);
+      font-size: 3em;
+      font-weight: bold;
+      color: #ffcaff;
+      background: #ffffff0a;
+      border: 2px solid #ffcaffaa;
+      border-radius: 2em;
+      padding: 1em 2em;
+      z-index: 9999;
+      text-align: center;
+      opacity: 0;
+      animation: heartFloat 3s ease-out forwards;
+      box-shadow: 0 0 2em #ffb3ff66;
+      pointer-events: none;
+    }
+
+    @keyframes heartFloat {
+      0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0;
+        filter: blur(2px);
+      }
+      20% {
+        transform: translate(-50%, -55%) scale(1.1);
+        opacity: 1;
+        filter: blur(0px);
+      }
+      50% {
+        transform: translate(-50%, -60%) scale(1);
+      }
+      100% {
+        transform: translate(-50%, -80%) scale(0.9);
+        opacity: 0;
+      }
+    }
+
+    /* Floating love text */
+    .love-float {
+      position: fixed;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #ffcaff;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0;
+      animation: floatLove 3s ease-out forwards;
+    }
+
+    @keyframes floatLove {
+      0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+      }
+      20% {
+        transform: translate(-50%, -55%) scale(1.2);
+        opacity: 1;
+      }
+      70% {
+        transform: translate(-50%, -80%) scale(1);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, -100%) scale(1);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="messageContainer"></div>
+
+  <!-- Heart Pop container -->
+  <div id="heartPop" class="heart-pop">❤️ I LOVE U WIFEY ❤️</div>
+
+  <script>
+    const messages = [
+      "When year 1 struck — the universe whispered a secret: a golden soul had arrived, the one who’d one day rewrite the definition of love for me.",
+      "Year 2 — with every tiny giggle, the stars turned pink, as if even they were smitten by the sweetness of your baby laugh.",
+      "Year 3 — somewhere in your tiny steps, the rhythm of my future heartbeats was quietly being composed.",
+      "Year 4 — your voice, still small, already carried the spark that would one day become the melody I crave more than silence.",
+      "Year 5 — your hands, still learning the world, already held the power to fix mine without even touching them.",
+      "Year 6 — the galaxies paused, just to watch you grow, because beauty like yours doesn’t just pass by — it blossoms and blesses.",
+      "Year 7 — even your silly faces could undo the greyest days, long before you knew whose skies you’d save.",
+      "Year 8 — kindness bloomed in you like soft petals kissed by sun and stardust, and I wonder how someone could be so gentle, yet so strong.",
+      "Year 9 — chaos, laughter, mischief — you became the kind of wild my heart would someday chase like its favorite dream.",
+      "Year 10 — you didn’t know it then, but every smile you smiled healed a boy who hadn’t even met you yet.",
+      "Year 11 — you were becoming a masterpiece — shaped by scars, crowned by love, and destined to make someone feel like home. That someone was me.",
+      "Year 12 — love in you wasn’t just a feeling — it became a force, and when it touched me, I never wanted to be without it again.",
+      "Year 13 — and now... now you stand glowing, laughing, loving — and I, the luckiest fool alive, get to call you mine. Happy birthday, my Gearhead. My miracle. My whole forever."
+    ];
+
+    const container = document.getElementById("messageContainer");
+
+    messages.forEach((msg, index) => {
+      const box = document.createElement("div");
+      box.className = "msg-box " + (index % 2 === 0 ? "left" : "right");
+
+      const fill = document.createElement("div");
+      fill.className = "msg-fill";
+
+      const text = document.createElement("div");
+      text.className = "msg-text";
+      text.textContent = msg;
+
+      box.appendChild(fill);
+      box.appendChild(text);
+      container.appendChild(box);
+    });
+
+    const boxes = document.querySelectorAll(".msg-box");
+
+    const revealNext = (index) => {
+      if (index >= boxes.length) return;
+
+      const box = boxes[index];
+      box.classList.add("visible");
+
+      setTimeout(() => {
+        box.classList.add("filled");
+
+        // Drop animation
+        const drop = document.createElement("div");
+        drop.className = "drop";
+        box.appendChild(drop);
+
+        // Show heart pop after 3rd message
+        if (index === 2) {
+          showHeartPop();
+        }
+
+        setTimeout(() => {
+          revealNext(index + 1);
+        }, 777);
+      }, 333);
+    };
+
+    const showHeartPop = () => {
+      const heart = document.getElementById("heartPop");
+      heart.style.display = "block";
+      heart.style.animation = "none";
+      void heart.offsetWidth;
+      heart.style.animation = "heartFloat 3s ease-out forwards";
+    };
+
+    revealNext(0);
+
+    // Floating love messages
+    const loveWords = [
+      "I love", "Soo cute", "You're mine", "My babygirl", "Adorable", "Perfect", "💘", "💗", "My love", "Wifey 💞"
+    ];
+
+    function floatLoveWord() {
+      const love = document.createElement("div");
+      love.className = "love-float";
+      love.textContent = loveWords[Math.floor(Math.random() * loveWords.length)];
+
+      love.style.left = (45 + Math.random() * 10) + "%";
+      love.style.top = (40 + Math.random() * 10) + "%";
+      document.body.appendChild(love);
+
+      setTimeout(() => {
+        love.remove();
+      }, 3000);
+    }
+
+    setInterval(floatLoveWord, 2000);
+  </script>
+
+</body>
+</html>
