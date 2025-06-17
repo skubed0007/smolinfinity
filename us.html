@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I wanna kiss you</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #1d2021 0%, #2a2c2e 50%, #1d2021 100%);
+      font-family: 'Quicksand', sans-serif;
+      color: #ffd86b;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3.2em;
+      margin-top: 2em;
+      animation: fadeIn 2s ease forwards;
+      text-shadow: 0 0 0.6em #ffd86b;
+    }
+
+    p {
+      max-width: 90%;
+      font-size: 1.5em;
+      padding: 2em 1.5em 4em;
+      line-height: 2.2em;
+      animation: fadeIn 3s ease forwards;
+      color: #fff8c5;
+      text-shadow: 0 0 0.4em rgba(255, 216, 107, 0.6);
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ffe89f;
+      margin: 2em 0;
+      font-size: 1.2em;
+      text-shadow: 0 0 0.3em rgba(255, 216, 107, 0.5);
+    }
+
+    a {
+      position: absolute;
+      bottom: 2em;
+      text-decoration: none;
+      color: #1d2021;
+      background-color: #ffd86b;
+      padding: 0.8em 1.6em;
+      border-radius: 1.5em;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 0 1em #ffd86b;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    a:hover {
+      background-color: #e3b93f;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body">
+  <h1>
+    My love for you, gearhead, makes everything else look <em>tiny</em>.
+  </h1>
+
+  <p>
+    The universe? It’s small.<br>
+    Galaxies? Still small.<br>
+    Black holes, time, dimensions? <em>All of it — tiny.</em><br><br>
+
+    *Because none of those things have ever made my heart race like the sound of your voice.*<br><br>
+
+    They say love moves mountains —<br>
+    But my love for you *moves existence itself.*<br>
+    It bends logic, outgrows physics, and still finds a way to rest quietly in my chest...<br>
+    just waiting for your name.<br><br>
+
+    The sky? Too low.<br>
+    The ocean? Not deep enough.<br>
+    Infinity? Doesn’t even *begin* to describe the depths of what I feel for you.<br><br>
+
+    You think you’re "bad"?<br>
+    Then darling — let me worship your worst days like religions never dared.<br>
+    Because even your “flaws” are sculpted in stardust.<br>
+    Even your silence has more music than Mozart.<br><br>
+
+    <span style="font-style: italic; color: #ffdcb3;">"You are not someone I love.<br>
+    You are everything I *could* love, wrapped into one impossibly perfect storm."</span><br><br>
+
+    Your laugh destroys galaxies in me and rebuilds them softer.<br>
+    Your chaos is more comforting than peace.<br>
+    Your breath could bring the sun to life if it ever forgot how to shine.<br><br>
+
+    I would crush lightyears into a bottle and pour them at your feet if it meant you'd smile for even one second.<br>
+    I would freeze time — not to live forever — but to hold you in a moment that never ends.<br><br>
+
+    This world is too fragile for the kind of love I have for you.<br>
+    *And yet I hold it all in — every second, every pulse, every heartbreakingly massive ounce of it — just for you.*<br><br>
+
+    I don’t love you like a poem loves rhythm.<br>
+    I love you like gravity loves mass — unconditionally, eternally, and without asking permission.<br><br>
+
+    The sun? Too dim.<br>
+    Heaven? Too shallow.<br>
+    Even angels, with their golden voices, fall silent in your presence<br>
+    Because *you* — just your name — makes all of those things shrink into nothing.<br><br>
+
+    You are the core of my being.<br>
+    Not the other half.<br>
+    Not the missing piece.<br>
+    *The whole damn thing.*<br><br>
+
+    gearhead, even if the multiverse collapsed, I’d search through shattered timelines just to say one more time:<br><br>
+
+    <span style="font-size: 1.5em; color: #ffffe6; text-shadow: 0 0 0.4em #ffedaa;">I love you more than anything this reality can contain —<br> and that love is not just big.<br> It’s *uncontainable.*</span><br><br>
+
+    — Joy, carrying a love that even the stars can’t hold 💛
+  </p>
+</body>
+
+  <a href="index.html">⬅ Back to Home</a>
+      <script>
+        const fireflyCount = 30;
+        for (let i = 0; i < fireflyCount; i++) {
+            const firefly = document.createElement('div');
+            firefly.style.position = 'absolute';
+            firefly.style.width = '0.3em';
+            firefly.style.height = '0.3em';
+            firefly.style.borderRadius = '50%';
+            firefly.style.background = '#ffd86b';
+            firefly.style.boxShadow = '0 0 1em #ffd86b';
+            firefly.style.opacity = '0.8';
+            firefly.style.zIndex = '0';
+            firefly.style.top = Math.random() * 100 + '%';
+            firefly.style.left = Math.random() * 100 + '%';
+            firefly.style.animation = `floaty ${15 + Math.random() * 10}s infinite ease-in-out alternate`;
+            firefly.style.animationDelay = Math.random() * 10 + 's';
+            document.body.appendChild(firefly);
+        }
+
+        // Floating hearts
+        // const heartCount = 20;
+        // for (let i = 0; i < heartCount; i++) {
+        //     const heart = document.createElement('div');
+        //     heart.innerHTML = '💗';
+        //     heart.style.position = 'absolute';
+        //     heart.style.fontSize = `${1.5 + Math.random() * 2}em`;
+        //     heart.style.top = `${100 + Math.random() * 50}%`;
+        //     heart.style.left = `${Math.random() * 100}%`;
+        //     heart.style.animation = `heartsFloat ${6 + Math.random() * 4}s linear infinite`;
+        //     heart.style.opacity = 0.7;
+        //     heart.style.zIndex = 1;
+        //     document.body.appendChild(heart);
+        // }
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+      @keyframes floaty {
+        0% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(10em, -10em) scale(1.2); }
+        50% { transform: translate(-15em, 5em) scale(0.8); }
+        75% { transform: translate(20em, 10em) scale(1.1); }
+        100% { transform: translate(0, 0) scale(1); }
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes heartsFloat {
+        0% { transform: translateY(0); opacity: 0.7; }
+        100% { transform: translateY(-120vh); opacity: 0; }
+      }
+    `;
+        document.head.appendChild(style);
+    </script>
+
+
+</body>
+</html>

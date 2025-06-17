@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #1d2021 0%, #2a2c2e 50%, #1d2021 100%);
+      font-family: 'Quicksand', sans-serif;
+      color: #ffd86b;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      max-width: 90%;
+      line-height: 1.4em;
+      margin-bottom: 3em;
+      z-index: 2;
+      animation: fadeIn 2s ease forwards;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h1 span {
+      display: inline-block;
+      animation: wobble 2.5s infinite ease-in-out;
+      padding: 0.1em;
+      text-shadow: 0 0 0.5em rgba(255, 216, 107, 0.6);
+    }
+
+    h1 span:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(3n) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes wobble {
+      0% { transform: translateY(0em) rotate(0deg); }
+      25% { transform: translateY(-0.1em) rotate(-2deg); }
+      50% { transform: translateY(0.1em) rotate(2deg); }
+      75% { transform: translateY(-0.2em) rotate(-1deg); }
+      100% { transform: translateY(0em) rotate(0deg); }
+    }
+
+    .nav-buttons {
+      position: absolute;
+      bottom: 3em;
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      flex-wrap: wrap;
+      z-index: 2;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 0.8em 1.6em;
+      border-radius: 1.5em;
+      background-color: #ffd86b;
+      color: #1d2021;
+      font-weight: bold;
+      box-shadow: 0 0 1em #ffd86b;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #e3b93f;
+      transform: scale(1.05);
+    }
+
+    .firefly {
+      position: absolute;
+      width: 0.3em;
+      height: 0.3em;
+      background: #ffd86b;
+      border-radius: 50%;
+      box-shadow: 0 0 1em #ffd86b;
+      opacity: 0.8;
+      z-index: 0;
+      animation: floaty 20s infinite ease-in-out alternate;
+    }
+
+    @keyframes floaty {
+      0% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(10em, -10em) scale(1.2); }
+      50% { transform: translate(-15em, 5em) scale(0.8); }
+      75% { transform: translate(20em, 10em) scale(1.1); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    audio {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    <span>🎉</span><span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+    <span>&nbsp;</span>
+    <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>
+    <span>&nbsp;</span>
+    <span>M</span><span>y</span>
+    <span>&nbsp;</span>
+    <span>S</span><span>t</span><span>a</span><span>r</span><span>l</span><span>i</span><span>g</span><span>h</span><span>t</span><span>✨</span>
+  </h1>
+
+  <div class="nav-buttons">
+    <a href="msg.html">Wanna know something?</a>
+    <a href="gallery.html">I do keep collections :3</a>
+    <a href="about.html">Me and You</a>
+    <a href="us.html">I am trying my best to pour my love here 0w0</a>
+  </div>
+
+  <audio autoplay loop>
+    <source src="assets/bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const fireflyCount = 30;
+    for (let i = 0; i < fireflyCount; i++) {
+      const firefly = document.createElement('div');
+      firefly.classList.add('firefly');
+      firefly.style.top = Math.random() * 100 + '%';
+      firefly.style.left = Math.random() * 100 + '%';
+      firefly.style.animationDelay = Math.random() * 10 + 's';
+      firefly.style.animationDuration = 15 + Math.random() * 10 + 's';
+      document.body.appendChild(firefly);
+    }
+  </script>
+
+</body>
+
+</html>

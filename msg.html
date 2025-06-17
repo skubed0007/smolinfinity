@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mwuuuuah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body style="
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1d2021 0%, #2a2c2e 50%, #1d2021 100%);
+  font-family: 'Quicksand', sans-serif;
+  color: #ffd86b;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+">
+
+    <h1 style="
+    font-size: 3.2em;
+    margin-top: 1em;
+    z-index: 2;
+    animation: fadeIn 2s ease forwards;
+  ">
+        A sweet msg for a sweetheart 💖
+    </h1>
+
+    <p style="
+  max-width: 90%;
+  font-size: 1.7em;
+  padding: 2em 1.5em 4em;
+  line-height: 2em;
+  z-index: 2;
+  animation: fadeIn 3s ease forwards;
+  color: #fff8c5;
+  text-shadow: 0 0 0.4em rgba(255, 216, 107, 0.6);
+">
+  GearHead, my moonflower in a world of noise —<br>
+  Loving you isn’t just a feeling. It’s an entire universe that lives inside my chest.<br><br>
+
+  If I could measure how much I love you, I’d need to count every grain of sand on Earth,<br>
+  every drop of water in the sea, every whisper the wind has ever carried since time began.<br><br>
+
+  My heart doesn’t beat — it sings your name with every thump.<br>
+  The stars don’t twinkle — they shimmer just to echo what I feel for you.<br><br>
+
+  You are the soft light in every shadow I’ve ever known.<br>
+  You’re the calm in the chaos, the dream that stayed when I woke up.<br><br>
+
+  If I had to wait lifetimes just to hold your hand again, I’d do it smiling —<br>
+  because even one second with you would be worth ten eternities without.<br><br>
+
+  My love is not a flame. It's a wildfire across galaxies, <br>
+  a sun that never sets, a lighthouse that never fades.<br><br>
+
+  I would fill the sky with handwritten notes of how much you mean to me,<br>
+  and still, the sky would run out of space.<br><br>
+
+  You’re the lullaby my soul sings when the world gets too loud.<br>
+  You’re every soft petal on every rose I’ve ever dreamed of giving.<br><br>
+
+  And even when I say "I love you",<br>
+  it still feels too small, too fragile, too human —<br>
+  because what I feel for you? It’s something the stars themselves envy.<br><br>
+
+  So read this and know:<br>
+  You are my forever wish, whispered a thousand times into the wind.<br>
+  My once-in-all-of-time kind of miracle. 🌠💖
+</p>
+<br>
+    <!-- Back Button -->
+    <a href="index.html" style="
+    position: absolute;
+    bottom: 2em;
+    text-decoration: none;
+    color: #1d2021;
+    background-color: #ffd86b;
+    padding: 0.8em 1.6em;
+    border-radius: 1.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 0 1em #ffd86b;
+    transition: all 0.3s ease;
+    z-index: 2;
+  " onmouseover="this.style.backgroundColor='#e3b93f'" onmouseout="this.style.backgroundColor='#ffd86b'">
+        ⬅ Back to Home
+    </a>
+
+    <!-- Fireflies -->
+    <script>
+        const fireflyCount = 30;
+        for (let i = 0; i < fireflyCount; i++) {
+            const firefly = document.createElement('div');
+            firefly.style.position = 'absolute';
+            firefly.style.width = '0.3em';
+            firefly.style.height = '0.3em';
+            firefly.style.borderRadius = '50%';
+            firefly.style.background = '#ffd86b';
+            firefly.style.boxShadow = '0 0 1em #ffd86b';
+            firefly.style.opacity = '0.8';
+            firefly.style.zIndex = '0';
+            firefly.style.top = Math.random() * 100 + '%';
+            firefly.style.left = Math.random() * 100 + '%';
+            firefly.style.animation = `floaty ${15 + Math.random() * 10}s infinite ease-in-out alternate`;
+            firefly.style.animationDelay = Math.random() * 10 + 's';
+            document.body.appendChild(firefly);
+        }
+
+        // Floating hearts
+        // const heartCount = 20;
+        // for (let i = 0; i < heartCount; i++) {
+        //     const heart = document.createElement('div');
+        //     heart.innerHTML = '💗';
+        //     heart.style.position = 'absolute';
+        //     heart.style.fontSize = `${1.5 + Math.random() * 2}em`;
+        //     heart.style.top = `${100 + Math.random() * 50}%`;
+        //     heart.style.left = `${Math.random() * 100}%`;
+        //     heart.style.animation = `heartsFloat ${6 + Math.random() * 4}s linear infinite`;
+        //     heart.style.opacity = 0.7;
+        //     heart.style.zIndex = 1;
+        //     document.body.appendChild(heart);
+        // }
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+      @keyframes floaty {
+        0% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(10em, -10em) scale(1.2); }
+        50% { transform: translate(-15em, 5em) scale(0.8); }
+        75% { transform: translate(20em, 10em) scale(1.1); }
+        100% { transform: translate(0, 0) scale(1); }
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes heartsFloat {
+        0% { transform: translateY(0); opacity: 0.7; }
+        100% { transform: translateY(-120vh); opacity: 0; }
+      }
+    `;
+        document.head.appendChild(style);
+    </script>
+
+    <!-- Music -->
+    <audio autoplay loop>
+        <source src="assets/bg.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>

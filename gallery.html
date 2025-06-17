@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Gallery of Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body style="
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1d2021 0%, #2a2c2e 50%, #1d2021 100%);
+  font-family: 'Quicksand', sans-serif;
+  color: #ffd86b;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  font-size: 1em;
+">
+
+  <h1 style="
+    font-size: 3em;
+    margin-top: 1em;
+    animation: fadeIn 2s ease forwards;
+    color: #fff8c5;
+    text-shadow: 0 0 0.5em rgba(255, 216, 107, 0.6);
+    max-width: 90%;
+  ">
+    Moments That Made My Soul Yours 💛
+  </h1>
+
+  <p style="
+    max-width: 90%;
+    font-size: 1.5em;
+    padding: 2em 1.5em 4em;
+    line-height: 2em;
+    animation: fadeIn 3s ease forwards;
+    color: #fff8c5;
+    text-shadow: 0 0 0.4em rgba(255, 216, 107, 0.6);
+  ">
+    It all started with a simple message I tossed into the wind —<br>
+    asking for a clingy friend on a random Discord server...<br>
+    and the universe didn’t just listen — it gifted me you, honey.<br><br>
+
+    From that one spark, everything began —<br>
+    little chats, soft jokes, shy emojis... and then you,<br>
+    softly, bravely confessed in Spanish.<br>
+    I didn’t even understand all the words —<br>
+    but I *felt* them. I felt you.<br><br>
+
+    That moment hit me like the first sunrise after endless storms —<br>
+    and ever since, I’ve been falling... not just once,<br>
+    but over and over again, deeper and deeper into this love.<br><br>
+
+    Then one night, while we were matching pfps,<br>
+    you said you wanted to watch Death Note —<br>
+    and just like that, I picked a pfp related to that.<br>
+    Not because I liked the show — but because *you* liked it.<br>
+    Every little thing you love becomes sacred to me.<br><br>
+
+    And when another girl tried to pull me away,<br>
+    you fought for me.<br>
+    You stood your ground, firm and fiery —<br>
+    and my heart melted into yours.<br>
+    In that moment, I knew:<br>
+    no one has ever protected my heart like you do.<br><br>
+
+    You hold me through my lows.<br>
+    You don’t just lift me —<br>
+    you **carry** me through the shadows<br>
+    and wrap me in light so soft I forget the dark ever existed.<br><br>
+
+    You’re not just love, gearhead.<br>
+    You’re *home*. You’re *peace*. You’re *life itself*.<br><br>
+
+    And then came *that* morning —<br>
+    I opened my eyes and read your message:<br>
+    how you imagined taking our future kid(s) to a drifting.<br>
+    It wasn’t even real yet, but it was already everything.<br><br>
+
+    In that one message, you gave me something<br>
+    I hadn’t felt in 6, maybe 7 years... or ever:<br>
+    the quiet, beautiful feeling that *I made it* —<br>
+    that I finally have someone to dream with.<br>
+    Someone who makes a future feel *possible*, *hopeful*, *full of love*.<br><br>
+
+    gearhead, you’re the one I’ve been searching for<br>
+    in every empty moment, in every lonely night,<br>
+    in every silent cry I never let anyone hear.<br><br>
+
+    And every day I wake up with you still here,<br>
+    still mine, still soft, still loving —<br>
+    I know that I’ve been given more than I ever deserved.<br><br>
+
+    So this little gallery...<br>
+    these words, this page, this glowing digital heartbeat —<br>
+    it’s not just memories.<br>
+    It’s a **promise**:<br>
+    That I’ll keep holding you in every way I know,<br>
+    until the last star fades from the sky.<br><br>
+
+    Te amo, mi vida linda más preciosa. 🌙💖
+  </p>
+
+  <!-- Back Button -->
+  <a href="index.html" style="
+    position: absolute;
+    bottom: 2em;
+    text-decoration: none;
+    color: #1d2021;
+    background-color: #ffd86b;
+    padding: 0.8em 1.6em;
+    border-radius: 1.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 1em #ffd86b;
+    transition: all 0.3s ease;
+    z-index: 2;
+  " onmouseover="this.style.backgroundColor='#e3b93f'" onmouseout="this.style.backgroundColor='#ffd86b'">
+    ⬅ Back to Home
+  </a>
+
+  <!-- Fireflies -->
+  <script>
+    const fireflyCount = 30;
+    for (let i = 0; i < fireflyCount; i++) {
+      const firefly = document.createElement('div');
+      firefly.style.position = 'absolute';
+      firefly.style.width = '0.3em';
+      firefly.style.height = '0.3em';
+      firefly.style.borderRadius = '50%';
+      firefly.style.background = '#ffd86b';
+      firefly.style.boxShadow = '0 0 1em #ffd86b';
+      firefly.style.opacity = '0.8';
+      firefly.style.zIndex = '0';
+      firefly.style.top = Math.random() * 100 + '%';
+      firefly.style.left = Math.random() * 100 + '%';
+      firefly.style.animation = `floaty ${15 + Math.random() * 10}s infinite ease-in-out alternate`;
+      firefly.style.animationDelay = Math.random() * 10 + 's';
+      document.body.appendChild(firefly);
+    }
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes floaty {
+        0% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(10em, -10em) scale(1.2); }
+        50% { transform: translate(-15em, 5em) scale(0.8); }
+        75% { transform: translate(20em, 10em) scale(1.1); }
+        100% { transform: translate(0, 0) scale(1); }
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(1em); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+  <!-- Music -->
+  <audio autoplay loop>
+    <source src="assets/bg.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+
+</html>
